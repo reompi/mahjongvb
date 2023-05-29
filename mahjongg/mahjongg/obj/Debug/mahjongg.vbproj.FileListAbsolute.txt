@@ -35,3 +35,16 @@ C:\Users\david\Source\Repos\exercicios-psi5\mahjongg\mahjongg\obj\Debug\mahjongg
 C:\Users\david\Source\Repos\exercicios-psi5\mahjongg\mahjongg\obj\Debug\mahjongg.exe
 C:\Users\david\Source\Repos\exercicios-psi5\mahjongg\mahjongg\obj\Debug\mahjongg.xml
 C:\Users\david\Source\Repos\exercicios-psi5\mahjongg\mahjongg\obj\Debug\mahjongg.pdb
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\bin\Debug\mahjongg.exe.config
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\bin\Debug\mahjongg.exe
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\bin\Debug\mahjongg.pdb
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\bin\Debug\mahjongg.xml
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.vbproj.AssemblyReference.cache
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.vbproj.SuggestedBindingRedirects.cache
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.mainForm.resources
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.Resources.resources
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.vbproj.GenerateResource.cache
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.vbproj.CoreCompileInputs.cache
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.exe
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.xml
+C:\Users\123746\Source\Repos\mahjongvb\mahjongg\mahjongg\obj\Debug\mahjongg.pdb

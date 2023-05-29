@@ -37,8 +37,11 @@
             Next
 
         Next
+
+
         flag = True
         ticker = 1
+
         For diagonal As Integer = meioX To 4 Step -1
 
             ticker += 1
@@ -51,9 +54,34 @@
             For parDePecas = 0 To 1
 
                 Do
+                    Dim _random As Integer = random.Next(8)
+                    Select Case _random
+                        Case 0
+                            posicaoAleatoriaX = meioX + ticker - 1
+                            posicaoAleatoriaY = diagonal - 4
+                        Case 1
+                            posicaoAleatoriaX = diagonal
+                            posicaoAleatoriaY = diagonal - 4
+                        Case 2
+                            posicaoAleatoriaX = meioX + ticker - 1
+                            posicaoAleatoriaY = meioY + ticker
+                        Case 3
+                            posicaoAleatoriaX = diagonal
+                            posicaoAleatoriaY = meioY + ticker
+                        Case 4
+                            posicaoAleatoriaX = diagonal - 1
+                            posicaoAleatoriaY = meioY - ticker + 2
+                        Case 5
+                            posicaoAleatoriaX = diagonal - 1
+                            posicaoAleatoriaY = meioY + ticker - 1
+                        Case 6
+                            posicaoAleatoriaX = meioX + ticker
+                            posicaoAleatoriaY = meioY - ticker + 1
+                        Case 7
+                            posicaoAleatoriaX = meioX + ticker
+                            posicaoAleatoriaY = meioY + ticker - 1
+                    End Select
 
-                    posicaoAleatoriaX = getPosicaoAleatoriaX(diagonal)
-                    posicaoAleatoriaY = getPosicaoAleatoriaY(diagonal - 3)
 
 
 
@@ -87,16 +115,17 @@
     Private Function getPosicaoAleatoriaX(x As Integer) As Integer
         Dim _random As Integer
 
+
         _random = random.Next(2)
 
         Select Case _random
             Case 0
                 Return x
             Case 1
-                If flag = True Then
-                    Return meioX + ticker - 1
-                End If
+
                 Return meioX + ticker
+            Case 2
+
         End Select
 
 
@@ -111,10 +140,7 @@
 
         Select Case _random
             Case 0
-                If flag = True Then
 
-                    Return y - 1
-                End If
                 Return y
             Case 1
                 Return meioY + ticker
