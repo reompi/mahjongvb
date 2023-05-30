@@ -4,11 +4,10 @@
         visivel
     End Enum
     Public Structure tile
-        Dim picturebox As PictureBox
-        Dim visibilidade As visibilidade
-        Dim simbolo As String
+        Dim Picturebox As PictureBox
+        Dim Visibilidade As visibilidade
     End Structure
     Public listTiles As New ArrayList
-    Public tileCicadaQueue As New Queue
+    Public tileListaQueue As New Queue
     Public tiles(5, 5) As tile
 End Module

@@ -1,110 +1,121 @@
 ﻿Public Class Form1
     Dim random As New Random
     Dim flagPrimeiroClick As Boolean = True
+    Dim percentagemFeita
+    Dim valorCadaTilePercentagem As Decimal = 5.5
+    Dim valorTotalPercentagem As Decimal
+
+    Dim labelPercentagem As New Label()
+    Dim recomecarBotao As New Button()
+
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        criarPictureBoxes()
-        labelPercentagem()
+        InitializeControls()
+        Iniciar()
     End Sub
 
-    Private Sub labelPercentagem()
+    Private Sub InitializeControls()
+        ' Declarar botão
+        recomecarBotao.Text = "Recomeçar"
+        recomecarBotao.Size = New Size(100, 50)
+        recomecarBotao.Location = New Point(240, 250)
+        Me.Controls.Add(recomecarBotao)
+        recomecarBotao.Hide()
+        AddHandler recomecarBotao.Click, AddressOf RecomecarBotao_Click
 
-        Dim lablePercentagem As New Label()
-        Dim valorCadaTile As Decimal = 5.5
-        Dim valorTotal As Integer
-
-        lablePercentagem.Font = New Font("Arial", 12, FontStyle.Bold)
-        lablePercentagem.ForeColor = Color.Black
-        lablePercentagem.BackColor = Color.White
-        lablePercentagem.Location = New Point(260, 10)
-        lablePercentagem.AutoSize = True
-
-        Me.Controls.Add(lablePercentagem)
-
-        For Each tile As tile In tiles
-
-            If tile.visibilidade = visibilidade.escondido Then
-                valorTotal += 5
-            End If
-
-        Next
-
-        lablePercentagem.Text = valorTotal & " %"
+        ' Declarar label
+        labelPercentagem.Font = New Font("Arial", 12, FontStyle.Bold)
+        labelPercentagem.ForeColor = Color.Black
+        labelPercentagem.BackColor = Color.White
+        labelPercentagem.Location = New Point(260, 10)
+        labelPercentagem.AutoSize = True
+        Me.Controls.Add(labelPercentagem)
     End Sub
-    Private Sub criarPictureBoxes()
-        Dim _randomY As Integer
-        Dim _randomX As Integer
-        Dim pecaAtual As Bitmap
-        Dim ticker As Integer
+
+    Private Sub CriarPictureBoxes()
+        Dim pictureBoxCounter As Integer = 0
 
         For y As Integer = 0 To 5
             For x As Integer = 0 To 5
-                ticker += 1
-                tiles(x, y).picturebox = CreatePictureBox(135 + y * 70, 60 + x * 70, "PictureBoxLayer1 " & ticker)
-                Me.Controls.Add(tiles(x, y).picturebox)
-                ticker += 1
-                AddHandler tiles(x, y).picturebox.Click, AddressOf _pictureboxClick
-
-
+                pictureBoxCounter += 1
+                tiles(x, y).Picturebox = CreatePictureBox(135 + y * 70, 60 + x * 70, "PictureBoxLayer1 " & pictureBoxCounter)
+                Me.Controls.Add(tiles(x, y).Picturebox)
+                pictureBoxCounter += 1
+                AddHandler tiles(x, y).Picturebox.Click, AddressOf PictureBox_Click
             Next
         Next
-
-
-        For Each tile As tile In tiles
-
-            If tile.visibilidade = visibilidade.visivel Then
-                Continue For
-            End If
-
-            pecaAtual = getPecaAleatoria()
-
-
-            tile.picturebox.Image = pecaAtual
-            tile.visibilidade = visibilidade.visivel
-
-            Do
-                _randomX = random.Next(6)
-                _randomY = random.Next(6)
-            Loop While tiles(_randomX, _randomY).visibilidade = visibilidade.visivel
-
-            tiles(_randomX, _randomY).picturebox.Image = pecaAtual
-            tiles(_randomX, _randomY).visibilidade = visibilidade.visivel
-        Next
-
     End Sub
-    Private Sub _pictureboxClick(sender As Object, e As EventArgs)
 
+    Private Sub Iniciar()
+        CriarPictureBoxes()
+        BaralharPecas()
+        AtualizarLabelPercentagem()
+    End Sub
 
+    Private Sub AtualizarLabelPercentagem()
+        If Math.Round(valorTotalPercentagem) <> 99 Then
+            labelPercentagem.Text = Math.Round(valorTotalPercentagem) & " %"
+        Else
+            labelPercentagem.Text = "100 %"
+            recomecarBotao.Show()
+        End If
+    End Sub
 
-        tileCicadaQueue.Enqueue(sender)
+    Private Sub RecomecarBotao_Click(sender As Object, e As EventArgs)
+        sender.Hide()
+        tiles = New tile(5, 5) {}
+        valorTotalPercentagem = 0
+        Iniciar()
+    End Sub
 
+    Private Sub BaralharPecas()
+        Dim _randomY As Integer
+        Dim _randomX As Integer
+        Dim pecaAtual As Bitmap
 
-        If flagPrimeiroClick = False Then
-            If getImagemIgual(tileCicadaQueue(0), tileCicadaQueue(1)) = True And tileCicadaQueue(0).name <> tileCicadaQueue(1).name Then
+        For y As Integer = 0 To 5
+            For x As Integer = 0 To 5
+                If tiles(x, y).Visibilidade = visibilidade.visivel Then
+                    Continue For
+                Else
+                    pecaAtual = getPecaAleatoria()
 
+                    tiles(x, y).Picturebox.Image = pecaAtual
+                    tiles(x, y).Visibilidade = visibilidade.visivel
+
+                    Do
+                        _randomX = random.Next(6)
+                        _randomY = random.Next(6)
+                    Loop While tiles(_randomX, _randomY).Visibilidade = variaveisGlobais.visibilidade.visivel
+
+                    tiles(_randomX, _randomY).Picturebox.Image = pecaAtual
+                    tiles(_randomX, _randomY).Visibilidade = visibilidade.visivel
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub PictureBox_Click(sender As Object, e As EventArgs)
+        tileListaQueue.Enqueue(sender)
+
+        If Not flagPrimeiroClick Then
+            If getImagemIgual(tileListaQueue(0), tileListaQueue(1)) = True AndAlso tileListaQueue(0).name <> tileListaQueue(1).name Then
+                valorTotalPercentagem += valorCadaTilePercentagem
                 For i = 0 To 1
-                    tileCicadaQueue(i).hide
-
-                    For Each tile As tile In tiles
-                        If tile.picturebox.Name = tileCicadaQueue(i).name Then
-                            tile.visibilidade = visibilidade.escondido
-                        End If
-
-                    Next
-
+                    tileListaQueue(i).hide
                 Next
 
-                tileCicadaQueue.Clear()
+                tileListaQueue.Clear()
                 flagPrimeiroClick = True
 
-                labelPercentagem()
+                AtualizarLabelPercentagem()
             Else
-                tileCicadaQueue.Dequeue()
+                tileListaQueue.Dequeue()
             End If
         Else
             flagPrimeiroClick = False
         End If
     End Sub
+
     Private Function CreatePictureBox(top As Integer, left As Integer, name As String) As PictureBox
         Dim pictureBox As New PictureBox()
         With pictureBox
@@ -117,13 +128,12 @@
             .BorderStyle = BorderStyle.FixedSingle
             .SizeMode = PictureBoxSizeMode.StretchImage
             .BorderStyle = BorderStyle.FixedSingle
-
         End With
+
         Return pictureBox
     End Function
 
-    Private Function getImagemIgual(image1 As PictureBox, image2 As PictureBox)
-
+    Private Function getImagemIgual(image1 As PictureBox, image2 As PictureBox) As Boolean
         Dim bitmap1 As New Bitmap(image1.Image)
         Dim bitmap2 As New Bitmap(image2.Image)
 
@@ -141,10 +151,8 @@
         Return True
     End Function
 
-
-    Private Function getPecaAleatoria()
-
-        Dim _random As Integer = Random.Next(12)
+    Private Function getPecaAleatoria() As Bitmap
+        Dim _random As Integer = random.Next(12)
         Select Case _random
             Case 0
                 Return My.Resources.bolas__1_
@@ -171,6 +179,7 @@
             Case 11
                 Return My.Resources.x__3_
         End Select
+
         Return Nothing
     End Function
 End Class
