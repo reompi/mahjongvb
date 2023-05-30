@@ -1,0 +1,25 @@
+C:\Users\david\source\repos\magjong da wish\magjong da wish\bin\Debug\magjong da wish.exe.config
+C:\Users\david\source\repos\magjong da wish\magjong da wish\bin\Debug\magjong da wish.exe
+C:\Users\david\source\repos\magjong da wish\magjong da wish\bin\Debug\magjong da wish.pdb
+C:\Users\david\source\repos\magjong da wish\magjong da wish\bin\Debug\magjong da wish.xml
+C:\Users\david\source\repos\magjong da wish\magjong da wish\obj\Debug\magjong da wish.vbproj.AssemblyReference.cache
+C:\Users\david\source\repos\magjong da wish\magjong da wish\obj\Debug\magjong_da_wish.Form1.resources
+C:\Users\david\source\repos\magjong da wish\magjong da wish\obj\Debug\magjong_da_wish.Resources.resources
+C:\Users\david\source\repos\magjong da wish\magjong da wish\obj\Debug\magjong da wish.vbproj.GenerateResource.cache
+C:\Users\david\source\repos\magjong da wish\magjong da wish\obj\Debug\magjong da wish.vbproj.CoreCompileInputs.cache
+C:\Users\david\source\repos\magjong da wish\magjong da wish\obj\Debug\magjong da wish.exe
+C:\Users\david\source\repos\magjong da wish\magjong da wish\obj\Debug\magjong da wish.xml
+C:\Users\david\source\repos\magjong da wish\magjong da wish\obj\Debug\magjong da wish.pdb
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\bin\Debug\magjong da wish.exe.config
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\bin\Debug\magjong da wish.exe
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\bin\Debug\magjong da wish.pdb
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\bin\Debug\magjong da wish.xml
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong da wish.vbproj.AssemblyReference.cache
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong da wish.vbproj.SuggestedBindingRedirects.cache
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong_da_wish.Form1.resources
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong_da_wish.Resources.resources
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong da wish.vbproj.GenerateResource.cache
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong da wish.vbproj.CoreCompileInputs.cache
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong da wish.exe
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong da wish.xml
+C:\Users\123746\Source\Repos\mahjongvb\magjong da wish\magjong da wish\obj\Debug\magjong da wish.pdb
