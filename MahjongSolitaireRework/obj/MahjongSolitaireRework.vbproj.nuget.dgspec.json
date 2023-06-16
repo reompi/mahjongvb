@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\123746\\source\\repos\\MahjongSolitaireRework\\MahjongSolitaireRework\\MahjongSolitaireRework.vbproj": {}
+    "C:\\Users\\123746\\Desktop\\MahjongSolitaireRework\\MahjongSolitaireRework\\MahjongSolitaireRework.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\123746\\source\\repos\\MahjongSolitaireRework\\MahjongSolitaireRework\\MahjongSolitaireRework.vbproj": {
+    "C:\\Users\\123746\\Desktop\\MahjongSolitaireRework\\MahjongSolitaireRework\\MahjongSolitaireRework.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123746\\source\\repos\\MahjongSolitaireRework\\MahjongSolitaireRework\\MahjongSolitaireRework.vbproj",
+        "projectUniqueName": "C:\\Users\\123746\\Desktop\\MahjongSolitaireRework\\MahjongSolitaireRework\\MahjongSolitaireRework.vbproj",
         "projectName": "MahjongSolitaireRework",
-        "projectPath": "C:\\Users\\123746\\source\\repos\\MahjongSolitaireRework\\MahjongSolitaireRework\\MahjongSolitaireRework.vbproj",
+        "projectPath": "C:\\Users\\123746\\Desktop\\MahjongSolitaireRework\\MahjongSolitaireRework\\MahjongSolitaireRework.vbproj",
         "packagesPath": "C:\\Users\\123746\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123746\\source\\repos\\MahjongSolitaireRework\\MahjongSolitaireRework\\obj\\",
+        "outputPath": "C:\\Users\\123746\\Desktop\\MahjongSolitaireRework\\MahjongSolitaireRework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
